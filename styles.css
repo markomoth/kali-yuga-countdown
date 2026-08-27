@@ -98,10 +98,11 @@ h1 { margin-bottom: .05em; color: var(--parchment); font-family: var(--display);
 
 main { position: relative; }
 .countdown-section { padding: clamp(2.2rem, 5vw, 4.5rem) 0 clamp(4rem, 8vw, 7rem); text-align: center; }
-.countdown { display: grid; grid-template-columns: 1.7fr repeat(4, 1fr); align-items: end; max-width: 1120px; margin: 0 auto; }
+.countdown { display: grid; grid-template-columns: minmax(0, 2.15fr) repeat(4, minmax(0, 1fr)); column-gap: clamp(.45rem, 1.8vw, 1.25rem); align-items: end; max-width: 1120px; margin: 0 auto; }
 .time-unit { position: relative; min-width: 0; padding: 0 .4rem; }
-.time-unit:not(.time-years)::before { position: absolute; top: .06em; left: -.12rem; color: var(--brass-muted); content: "·"; font-family: var(--display); font-size: clamp(2.2rem, 5vw, 5.25rem); line-height: 1; }
-.time-value { display: block; min-height: 1.08em; color: var(--parchment); font-family: var(--display); font-size: clamp(2.7rem, 6.25vw, 6.65rem); font-variant-numeric: tabular-nums; font-weight: 500; letter-spacing: .015em; line-height: 1; white-space: nowrap; }
+.time-unit:not(.time-years)::before { position: absolute; top: .06em; left: -.52rem; color: var(--brass-muted); content: "·"; font-family: var(--display); font-size: clamp(2rem, 4.2vw, 4.6rem); line-height: 1; }
+.time-value { display: block; min-height: 1.08em; color: var(--parchment); font-family: var(--display); font-size: clamp(2.7rem, 5.1vw, 5.8rem); font-variant-numeric: tabular-nums; font-weight: 500; letter-spacing: .005em; line-height: 1; white-space: nowrap; }
+.time-years .time-value { font-size: clamp(3.3rem, 5.25vw, 5.8rem); }
 .time-years .time-value { color: #e3d0ab; }
 .time-label { display: block; margin-top: .8rem; color: var(--ash); font-size: clamp(.55rem, 1vw, .78rem); font-weight: 500; line-height: 1.2; }
 .label-tail { color: var(--brass-muted); }
@@ -112,16 +113,16 @@ main { position: relative; }
 .section-heading { margin-bottom: 1.7rem; }
 .section-kicker { margin-bottom: .3rem; color: var(--brass); font-size: .64rem; font-weight: 600; }
 h2 { color: var(--parchment); font-family: var(--display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; line-height: 1; }
-.cycle { position: relative; display: flex; margin: 0; padding: 1.2rem 0 0; list-style: none; border-top: 1px solid var(--border); }
-.cycle::before { position: absolute; top: 2.9rem; right: 0; left: 0; height: 1px; content: ""; background: rgba(201,185,147,.28); }
+.cycle { position: relative; display: flex; margin: 0; padding: 1rem 0 0; list-style: none; border-top: 1px solid var(--border); }
+.cycle::before { position: absolute; top: 3.85rem; right: 0; left: 0; height: 1px; content: ""; background: rgba(201,185,147,.28); }
 .cycle-item { position: relative; width: var(--cycle-width); padding-right: .75rem; }
-.cycle-item::after { position: absolute; top: 2.51rem; right: 0; width: 1px; height: .78rem; content: ""; background: var(--parchment); opacity: .75; }
+.cycle-item::after { position: absolute; top: 3.45rem; right: 0; width: 1px; height: .78rem; content: ""; background: var(--parchment); opacity: .75; }
 .cycle-item:last-child::after { display: none; }
 .satya { --cycle-width: 40%; }
 .treta { --cycle-width: 30%; }
 .dvapara { --cycle-width: 20%; }
 .kali { --cycle-width: 10%; }
-.cycle-label { display: flex; align-items: baseline; justify-content: space-between; gap: .4rem; min-height: 1.8rem; color: var(--parchment); font-family: var(--display); font-size: clamp(1.1rem, 2vw, 1.55rem); letter-spacing: .13em; text-transform: uppercase; }
+.cycle-label { display: flex; align-items: baseline; justify-content: space-between; gap: .4rem; min-height: 2rem; color: var(--parchment); font-family: var(--display); font-size: clamp(1.1rem, 2vw, 1.55rem); letter-spacing: .13em; line-height: 1.15; text-transform: uppercase; }
 .cycle-label small { color: var(--brass); font-family: var(--sans); font-size: .58rem; letter-spacing: .1em; white-space: nowrap; }
 .cycle-bar { position: relative; z-index: 1; height: .35rem; margin-top: .95rem; }
 .cycle-bar span { display: block; width: 100%; height: 100%; background: var(--brass-muted); opacity: .75; }
@@ -172,7 +173,7 @@ blockquote cite { color: var(--brass); font-size: .62rem; font-style: normal; le
   .time-years .time-value { font-size: clamp(4.6rem, 19vw, 7rem); }
   .time-years .time-label { margin-top: .3rem; }
   .time-value { font-size: clamp(2.25rem, 9vw, 3.8rem); }
-  .time-unit:not(.time-years)::before { top: .02em; font-size: clamp(1.9rem, 7vw, 3.2rem); }
+  .time-unit:not(.time-years)::before { top: .02em; left: -.18rem; font-size: clamp(1.9rem, 7vw, 3.2rem); }
   .cycle { display: block; padding-top: .2rem; border-top: 0; }
   .cycle::before { display: none; }
   .cycle-item { width: 100%; padding: .9rem 0 1rem; border-bottom: 1px solid var(--border); }
